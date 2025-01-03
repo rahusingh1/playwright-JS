@@ -18,9 +18,38 @@ const person = {
     lastName: 'Singh'
 }
 
-const getFullName = (p) => `${p.firstName} ${p.lastName}`
+const getFullName = (p) => `${p.firstName} ${p.lastName}` // OR p => `${p.firstname}` both are same
 
 const fullName = getFullName(person);
 console.log(fullName);
 
+// 5. arrow function with default parameters
+const greet = (username='Tom', age=2) => `Namaste ${username}! you are ${age} years old.`
+const gr = greet();
+console.log(gr);
+
+const gr1 = greet("Ravi", 35);
+console.log(gr1);
+
+// 6. arrow function with rest parameters also called ... or varargs parameters
+const numb = (...numbers) => numbers.reduce((acc, num) => acc+num, 0);
+const sum = numb(1,2,3,4,5);
+console.log(sum);
+
+const getBrowserDetails = (browser='chrome', ...otherDetails) => {
+    console.log(`Browser: ${browser}`);
+    console.log("Other details: ", otherDetails);
+}
+
+getBrowserDetails();
+getBrowserDetails('firefox', 'version: 115.56', 'vendor: mozilla');
+
+
+// 7. max number using Math
+const findMax = (a,b,c) => {
+    return Math.max(a,b,c);
+};
+
+const maxNum = findMax(20, 5, 67);
+console.log(maxNum);
 
