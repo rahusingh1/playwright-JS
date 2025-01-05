@@ -16,7 +16,8 @@ class car{
     }
 }
 
-const c1 = new car("BMW","Q7","Black",50000);
+// new car(); is the object here and c1 is reference variable, we can call object name as well.
+const c1 = new car("BMW","Q7","Black",50000); // object created with new keyword here
 
 console.log(c1.name +", "+ c1.model +", "+ c1.color +", "+c1.price);
 c1.refuel();
