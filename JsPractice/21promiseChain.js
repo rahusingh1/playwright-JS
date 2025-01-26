@@ -6,7 +6,7 @@ function getEvenNumber(value, delay){
                 resolve(value);
             }
             else{
-                reject(new Error("Value is not an even number."));
+                reject(new Error("Value is not an even number, Number was: "+ value));
             }
         });
     });
@@ -22,5 +22,5 @@ getEvenNumber(4, 1000)
         console.log("Step2: entered value is an even number: ", result1 );
     })
     .catch(error=>{
-        console.log("Promise rejected with error: ", error);
+        console.log("Promise rejected with error: ", error.message);
     })
