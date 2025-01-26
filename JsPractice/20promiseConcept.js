@@ -13,9 +13,9 @@ const randomNumber  = new Promise((resolve, reject)=>{
 });
 
 randomNumber
-    .then(result => {
+    .then(result => { // here then is kind of handler function if promise fulfilled
         console.log("Promise is fulfilled with value: ", result);
     })
-    .catch(error =>{
+    .catch(error =>{ // here catch is kind of handler function if promise rejected
         console.log("Promise is rejected: ", error);
     })
